@@ -1,13 +1,13 @@
 :global {
     .swim-skill{
-        height: 100vh;
+        height: 100%;
         display: flex;
         .submenu-wrap{
             width:220px;
         }
         .show-wrap{
             width: calc(100% - 220px);
-            padding: 0 20px;
+            padding: 0 10px;
             box-sizing: border-box;
         }
     }

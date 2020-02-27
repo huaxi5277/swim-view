@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import style from  './index.scss'
 import {Button} from 'antd'
-import {Link,Switch} from 'dva/router'
+import {Link,Switch,Redirect} from 'dva/router'
 import Private from '../../../utils/Private'
 class index extends Component {
     render() {
         const {routes} =this.props
         return (
-            <div className="backstroke-wrap">
+            <div className="freestroke-wrap">
                 <div className="button-wrap">
                     <Button>
                         <Link to="/study/freestroke/history">自由泳的历史</Link>
@@ -22,7 +22,7 @@ class index extends Component {
                         <Link to="/study/freestroke/compontation">自由泳与竞赛</Link>
                     </Button>
                 </div>
-                <div>
+             
                     <Switch>
                             {
                                 routes.map((route,i)=>{
@@ -31,8 +31,9 @@ class index extends Component {
                                     )
                                 })
                             }
+                           <Redirect from="/study/freestroke" to="/study/freestroke/history" exact></Redirect>
                     </Switch>
-                </div>
+        
             </div>
         )
     }

@@ -62,22 +62,22 @@ let routeArr = [
             model : [],
             routes : [
               {
-                path : "/study/backstroke/history",
+                path : "/study/freestroke/history",
                 component : ()=>import('./routes/Study/freestroke/history'),
                 model : [],
               },
               {
-                path : "/study/backstroke/basic",
+                path : "/study/freestroke/basic",
                 component : ()=>import('./routes/Study/freestroke/basic'),
                 model : [],
               },
               {
-                path : "/study/backstroke/senior",
+                path : "/study/freestroke/senior",
                 component : ()=>import('./routes/Study/freestroke/senior'),
                 model : [],
               },
               {
-                path : "/study/backstroke/compontation",
+                path : "/study/freestroke/compontation",
                 component : ()=>import('./routes/Study/freestroke/compontation'),
                 model : [],
               }
@@ -116,22 +116,22 @@ let routeArr = [
             model : [],
             routes : [
               {
-                path : "/study/backstroke/history",
+                path : "/study/butterflystroke/history",
                 component : ()=>import('./routes/Study/butterflystroke/history'),
                 model : [],
               },
               {
-                path : "/study/backstroke/basic",
+                path : "/study/butterflystroke/basic",
                 component : ()=>import('./routes/Study/butterflystroke/basic'),
                 model : [],
               },
               {
-                path : "/study/backstroke/senior",
+                path : "/study/butterflystroke/senior",
                 component : ()=>import('./routes/Study/butterflystroke/senior'),
                 model : [],
               },
               {
-                path : "/study/backstroke/compontation",
+                path : "/study/butterflystroke/compontation",
                 component : ()=>import('./routes/Study/butterflystroke/compontation'),
                 model : [],
               }

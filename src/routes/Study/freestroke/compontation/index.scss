@@ -1,0 +1,28 @@
+:global {
+    .history-wrap{
+        width: 80%;
+        margin: 0 auto;
+        position: relative;
+        top: 50px;
+        .btn{
+            float: right;
+        }
+        // .ant-table-row{
+        //     display: flex;
+        //     overflow: hidden;
+        //     white-space: nowrap;
+        //     text-overflow: ellipsis;
+        // } 
+        .ant-table-wrapper{
+            min-height: 700px;
+            .ant-table-tbody > tr > td {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+        }
+        .ant-pagination{
+            margin: 50px 0 360px 0;
+        }
+    }
+}

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import style from  './index.scss'
 import {Button} from 'antd'
-import {Link,Switch} from 'dva/router'
+import {Link,Switch,Redirect} from 'dva/router'
 import Private from '../../../utils/Private'
 class index extends Component {
     render() {
@@ -22,7 +22,7 @@ class index extends Component {
                         <Link to="/study/butterflystroke/compontation">蝶泳与竞赛</Link>
                     </Button>
                 </div>
-                <div>
+             
                     <Switch>
                             {
                                 routes.map((route,i)=>{
@@ -31,8 +31,9 @@ class index extends Component {
                                     )
                                 })
                             }
+                            <Redirect from="/study/butterflystroke" to="/study/butterflystroke/history" exact></Redirect>
                     </Switch>
-                </div>
+               
             </div>
         )
     }

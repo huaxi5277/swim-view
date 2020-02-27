@@ -8,38 +8,26 @@ class index extends Component {
     constructor(){
         super()
         this.state = {
-            SelectedKeys : ['breaststroke']
+            SelectedKeys : []
         }
     }
-    // componentDidMount(){
-    // const arr =   this.props.location.pathname.split('/')
-    // this.handleClick(arr[2])
-    // }
-    // UNSAFE_componentWillReceiveProps(nextProps) {
-    //     const { pathname } = this.props.location;
-    //     const arr =  pathname.split('/')
-    //     if (nextProps.location.pathname !== pathname) {
-    //       // 当路由发生改变时, 改变当前菜单选中key值
-    //       this.handleSetSelectedKeys(nextProps.location.pathname);
-    //     }
-    //   }
-    handleClick(key){
-       const k = key.key
+    componentDidMount(){
+    const arr =   this.props.location.pathname.split('/')
+    this.handleClick(arr[2])
+    }
+    handleClick(k){
        this.setState({
            SelectedKeys : [k]
        })
     }
     render() {
         const {routes} = this.props
-        console.log(this.state.SelectedKeys);
-        
         return (
             <div className="swim-skill">
                 <Menu
                  mode="inline"
-                 defaultSelectedKeys={this.state.SelectedKeys}
+                 selectedKeys={this.state.SelectedKeys}
                  defaultOpenKeys={['sub1']}
-                 onClick={(key)=>this.handleClick(key)}
                  className="submenu-wrap"
                 >
                     <SubMenu
@@ -56,7 +44,6 @@ class index extends Component {
                      <Menu.Item key="backstroke"><Link to="/study/backstroke">仰泳</Link></Menu.Item>
                      <Menu.Item key="freestroke"><Link to="/study/freestroke">自由泳</Link></Menu.Item>
                      </Menu.ItemGroup>
-
                     </SubMenu>
                     <SubMenu
                     key="sub2"

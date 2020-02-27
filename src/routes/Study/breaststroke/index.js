@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import style from  './index.scss'
 import {Button} from 'antd'
-import {Link,Switch} from 'dva/router'
-import Private from '../../../utils/Private'
+import {Link,Switch,Redirect} from 'dva/router'
+import Private,{RedirectRoute,NoMatchRoute} from '../../../utils/Private'
 class index extends Component {
     render() {
         const {routes} =this.props
@@ -22,7 +22,7 @@ class index extends Component {
                         <Link to="/study/breaststroke/compontation">蛙泳与竞赛</Link>
                     </Button>
                 </div>
-                <div>
+         
                     <Switch>
                             {
                                 routes.map((route,i)=>{
@@ -31,8 +31,9 @@ class index extends Component {
                                     )
                                 })
                             }
+                            <Redirect from="/study/breaststroke" to="/study/breaststroke/history" exact></Redirect>
                     </Switch>
-                </div>
+            
             </div>
         )
     }
