@@ -30,6 +30,21 @@ let routeArr = [
         model : [],
         routes:[
           {
+            path : "/study/before",
+            component : ()=>import('./routes/Before/before'),
+            model : [],
+          },
+          {
+            path : "/study/after",
+            component : ()=>import('./routes/Before/after'),
+            model : [],
+          },
+          {
+            path : "/study/physical",
+            component : ()=>import('./routes/Physical'),
+            model : [],
+          },
+          {
             path : "/study/breaststroke",
             component : ()=>import('./routes/Study/breaststroke'),
             model : [],

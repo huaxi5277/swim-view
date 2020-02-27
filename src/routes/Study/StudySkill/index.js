@@ -8,7 +8,7 @@ class index extends Component {
     constructor(){
         super()
         this.state = {
-            SelectedKeys : []
+            SelectedKeys : [],
         }
     }
     componentDidMount(){
@@ -22,12 +22,13 @@ class index extends Component {
     }
     render() {
         const {routes} = this.props
+
         return (
             <div className="swim-skill">
                 <Menu
                  mode="inline"
                  selectedKeys={this.state.SelectedKeys}
-                 defaultOpenKeys={['sub1']}
+                 defaultOpenKeys={['sub1','sub2','sub3']}
                  className="submenu-wrap"
                 >
                     <SubMenu
@@ -45,6 +46,7 @@ class index extends Component {
                      <Menu.Item key="freestroke"><Link to="/study/freestroke">自由泳</Link></Menu.Item>
                      </Menu.ItemGroup>
                     </SubMenu>
+
                     <SubMenu
                     key="sub2"
                     className="submenu-wrap"
@@ -53,7 +55,13 @@ class index extends Component {
                             <span>基础锻炼</span>
                         </span>
                     }
-                    ></SubMenu>
+                    >
+                        <Menu.ItemGroup key="g2">
+                              <Menu.Item key="physical"><Link to="/study/physical">基础锻炼</Link></Menu.Item>
+                        </Menu.ItemGroup>
+                    
+
+                    </SubMenu>
                     <SubMenu
                     key="sub3"
                     className="submenu-wrap"
@@ -62,16 +70,13 @@ class index extends Component {
                             <span>泳前/泳后护理</span>
                         </span>
                     }
-                    ></SubMenu>
-                    <SubMenu
-                    key="sub4"
-                    className="submenu-wrap"
-                    title={
-                        <span>
-                            <span>我的</span>
-                        </span>
-                    }
-                    ></SubMenu>
+                    >
+                        <Menu.ItemGroup key="g3">
+                        <Menu.Item key="before"><Link to="/study/before">泳前</Link></Menu.Item>
+                        <Menu.Item key="after"><Link to="/study/after">泳后</Link></Menu.Item>
+                        </Menu.ItemGroup>
+                    </SubMenu>
+
                 </Menu>
 
                 <div className="show-wrap">
